@@ -23,19 +23,45 @@ class Classification:
 
 
 ROLE_TERMS = (
-    "software engineer", "software developer", "software development engineer",
-    "backend engineer", "back-end engineer", "full stack", "fullstack",
-    "platform engineer", "infrastructure engineer", "systems engineer",
-    "site reliability engineer", "data engineer", "analytics engineer",
-    "machine learning engineer", "ml engineer", "artificial intelligence engineer",
-    "ai engineer", "research engineer", "sde", "swe",
+    "software engineer",
+    "software developer",
+    "software development engineer",
+    "backend engineer",
+    "back-end engineer",
+    "full stack",
+    "fullstack",
+    "platform engineer",
+    "infrastructure engineer",
+    "systems engineer",
+    "site reliability engineer",
+    "data engineer",
+    "analytics engineer",
+    "machine learning engineer",
+    "ml engineer",
+    "artificial intelligence engineer",
+    "ai engineer",
+    "research engineer",
+    "sde",
+    "swe",
 )
 HARD_SENIOR_TERMS = (
-    "senior", "staff", "principal", "distinguished", "manager", "director",
-    "head of", "architect", "vice president",
+    "senior",
+    "staff",
+    "principal",
+    "distinguished",
+    "lead",
+    "manager",
+    "director",
+    "head of",
+    "architect",
+    "vice president",
 )
 NON_ENGINEERING_TERMS = (
-    "sales", "marketing", "recruiter", "designer", "customer support",
+    "sales",
+    "marketing",
+    "recruiter",
+    "designer",
+    "customer support",
 )
 REVIEW_LEVEL_RE = re.compile(r"\b(?:engineer|developer)\s+(?:ii|2)\b", re.I)
 
@@ -54,43 +80,167 @@ def classify_role(title: str) -> Classification:
 
 
 US_STATES = (
-    "alabama", "alaska", "arizona", "arkansas", "california", "colorado",
-    "connecticut", "delaware", "florida", "georgia", "hawaii", "idaho",
-    "illinois", "indiana", "iowa", "kansas", "kentucky", "louisiana",
-    "maine", "maryland", "massachusetts", "michigan", "minnesota",
-    "mississippi", "missouri", "montana", "nebraska", "nevada",
-    "new hampshire", "new jersey", "new mexico", "new york",
-    "north carolina", "north dakota", "ohio", "oklahoma", "oregon",
-    "pennsylvania", "rhode island", "south carolina", "south dakota",
-    "tennessee", "texas", "utah", "vermont", "virginia", "washington",
-    "west virginia", "wisconsin", "wyoming", "district of columbia",
+    "alabama",
+    "alaska",
+    "arizona",
+    "arkansas",
+    "california",
+    "colorado",
+    "connecticut",
+    "delaware",
+    "florida",
+    "georgia",
+    "hawaii",
+    "idaho",
+    "illinois",
+    "indiana",
+    "iowa",
+    "kansas",
+    "kentucky",
+    "louisiana",
+    "maine",
+    "maryland",
+    "massachusetts",
+    "michigan",
+    "minnesota",
+    "mississippi",
+    "missouri",
+    "montana",
+    "nebraska",
+    "nevada",
+    "new hampshire",
+    "new jersey",
+    "new mexico",
+    "new york",
+    "north carolina",
+    "north dakota",
+    "ohio",
+    "oklahoma",
+    "oregon",
+    "pennsylvania",
+    "rhode island",
+    "south carolina",
+    "south dakota",
+    "tennessee",
+    "texas",
+    "utah",
+    "vermont",
+    "virginia",
+    "washington",
+    "west virginia",
+    "wisconsin",
+    "wyoming",
+    "district of columbia",
 )
 US_STATE_CODES_RE = re.compile(
     r"(?:,\s*|\b)(?:AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|"
     r"MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|"
-    r"TN|TX|UT|VT|VA|WA|WV|WI|WY|DC)(?:\b|,)", re.I,
+    r"TN|TX|UT|VT|VA|WA|WV|WI|WY|DC)(?:\b|,)",
+    re.I,
 )
 FOREIGN_MARKERS = (
-    "united kingdom", "canada", "india", "germany", "france", "poland",
-    "japan", "australia", "netherlands", "singapore", "ireland", "israel",
-    "spain", "sweden", "norway", "denmark", "finland", "lithuania",
-    "estonia", "south korea", "united arab emirates", "brazil", "mexico",
-    "argentina", "switzerland", "austria", "italy", "portugal", "belgium",
-    "china", "taiwan", "hong kong", "philippines", "indonesia", "vietnam",
-    "thailand", "new zealand", "colombia", "chile", "nigeria", "egypt",
-    "turkey", "hungary", "czechia", "czech republic", "romania", "bulgaria",
-    "serbia", "croatia", "greece", "ukraine", "russia", "pakistan",
-    "bangladesh", "sri lanka", "malaysia", "emea", "apac", "latam",
-    "london", "toronto", "vancouver", "montreal", "bangalore", "bengaluru",
-    "hyderabad", "pune", "mumbai", "delhi", "chennai", "gurgaon", "dublin",
-    "paris", "berlin", "munich", "amsterdam", "tokyo", "sydney", "melbourne",
-    "tel aviv", "warsaw", "zurich", "seoul", "sao paulo", "mexico city",
-    "dubai", "oslo", "stockholm", "copenhagen", "madrid", "barcelona",
-    "vilnius", "krakow", "lisbon", "budapest", "prague", "bucharest",
+    "united kingdom",
+    "canada",
+    "india",
+    "germany",
+    "france",
+    "poland",
+    "japan",
+    "australia",
+    "netherlands",
+    "singapore",
+    "ireland",
+    "israel",
+    "spain",
+    "sweden",
+    "norway",
+    "denmark",
+    "finland",
+    "lithuania",
+    "estonia",
+    "south korea",
+    "united arab emirates",
+    "brazil",
+    "mexico",
+    "argentina",
+    "switzerland",
+    "austria",
+    "italy",
+    "portugal",
+    "belgium",
+    "china",
+    "taiwan",
+    "hong kong",
+    "philippines",
+    "indonesia",
+    "vietnam",
+    "thailand",
+    "new zealand",
+    "colombia",
+    "chile",
+    "nigeria",
+    "egypt",
+    "turkey",
+    "hungary",
+    "czechia",
+    "czech republic",
+    "romania",
+    "bulgaria",
+    "serbia",
+    "croatia",
+    "greece",
+    "ukraine",
+    "russia",
+    "pakistan",
+    "bangladesh",
+    "sri lanka",
+    "malaysia",
+    "emea",
+    "apac",
+    "latam",
+    "london",
+    "toronto",
+    "vancouver",
+    "montreal",
+    "bangalore",
+    "bengaluru",
+    "hyderabad",
+    "pune",
+    "mumbai",
+    "delhi",
+    "chennai",
+    "gurgaon",
+    "dublin",
+    "paris",
+    "berlin",
+    "munich",
+    "amsterdam",
+    "tokyo",
+    "sydney",
+    "melbourne",
+    "tel aviv",
+    "warsaw",
+    "zurich",
+    "seoul",
+    "sao paulo",
+    "mexico city",
+    "dubai",
+    "oslo",
+    "stockholm",
+    "copenhagen",
+    "madrid",
+    "barcelona",
+    "vilnius",
+    "krakow",
+    "lisbon",
+    "budapest",
+    "prague",
+    "bucharest",
 )
 US_MARKERS_RE = re.compile(
     r"\b(?:united states(?: of america)?|u\.s\.a\.?|usa|us[- ]only|"
-    r"remote[- ]us|us[- ]remote)\b", re.I,
+    r"remote[- ]us|us[- ]remote)\b",
+    re.I,
 )
 
 
@@ -113,19 +263,40 @@ def classify_location(location: str) -> Classification:
 
 
 TEMPLATE_SIGNALS = (
-    "<job title>", "insert date", "xxx,xxx", "job function>", "[option a",
-    "[option b", "specify education, previous job", "begin each bullet with an action",
+    "<job title>",
+    "insert date",
+    "xxx,xxx",
+    "job function>",
+    "[option a",
+    "[option b",
+    "specify education, previous job",
+    "begin each bullet with an action",
 )
 CLEARANCE_SIGNALS = (
-    "active security clearance", "active clearance", "top secret", "ts/sci",
-    "must be a u.s. citizen", "must be a us citizen", "u.s. citizenship required",
-    "us citizenship required", "citizenship required", "polygraph",
+    "active security clearance",
+    "active clearance",
+    "top secret",
+    "ts/sci",
+    "must be a u.s. citizen",
+    "must be a us citizen",
+    "u.s. citizenship required",
+    "us citizenship required",
+    "citizenship required",
+    "polygraph",
 )
 NO_SPONSORSHIP_SIGNALS = (
-    "not able to sponsor", "unable to sponsor", "cannot sponsor", "does not sponsor",
-    "do not sponsor", "no visa sponsorship", "not provide visa sponsorship",
-    "not sponsor visas", "without visa sponsorship", "sponsorship is not available",
-    "not offer sponsorship", "unable to provide sponsorship",
+    "not able to sponsor",
+    "unable to sponsor",
+    "cannot sponsor",
+    "does not sponsor",
+    "do not sponsor",
+    "no visa sponsorship",
+    "not provide visa sponsorship",
+    "not sponsor visas",
+    "without visa sponsorship",
+    "sponsorship is not available",
+    "not offer sponsorship",
+    "unable to provide sponsorship",
 )
 
 
@@ -138,15 +309,21 @@ def classify_description(title: str, description: str) -> Classification:
     if any(signal in text for signal in TEMPLATE_SIGNALS):
         return Classification(Decision.INELIGIBLE, "template or unfinished posting")
     if any(signal in text for signal in CLEARANCE_SIGNALS):
-        return Classification(Decision.INELIGIBLE, "citizenship or active-clearance requirement")
+        return Classification(
+            Decision.INELIGIBLE, "citizenship or active-clearance requirement"
+        )
     if any(signal in text for signal in NO_SPONSORSHIP_SIGNALS):
         return Classification(Decision.INELIGIBLE, "explicitly unavailable sponsorship")
     years = [int(value) for value in re.findall(r"\b(\d{1,2})\+?\s+years?\b", text)]
     years = [value for value in years if value <= 20]
     if years and min(years) >= 4:
-        return Classification(Decision.INELIGIBLE, "minimum experience appears to be 4+ years")
+        return Classification(
+            Decision.INELIGIBLE, "minimum experience appears to be 4+ years"
+        )
     if years and min(years) >= 2:
-        return Classification(Decision.REVIEW, "minimum experience appears to be 2-3 years")
+        return Classification(
+            Decision.REVIEW, "minimum experience appears to be 2-3 years"
+        )
     return Classification(Decision.APPLY, "no blocking requirement detected")
 
 
@@ -157,7 +334,9 @@ def combine(*items: Classification) -> Classification:
     reviews = [item.reason for item in items if item.decision == Decision.REVIEW]
     if reviews:
         return Classification(Decision.REVIEW, "; ".join(reviews))
-    return Classification(Decision.APPLY, "eligible target role with explicit US location")
+    return Classification(
+        Decision.APPLY, "eligible target role with explicit US location"
+    )
 
 
 def classify_job(title: str, location: str, description: str) -> Classification:
