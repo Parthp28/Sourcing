@@ -1,0 +1,11 @@
+CURSOR_*.md
+.cursorrules
+CLAUDE.md
+PROGRESS.md
+*.cpython-*.so
+__pycache__/
+.DS_Store
+.env
+config/companies.yaml.bak
+.pytest_cache/
+.coverage

@@ -1,0 +1,226 @@
+# Verified working companies as of last run of verify_companies.py
+# Backup of the previous file saved to companies.yaml.bak
+
+companies:
+- {name: Stripe, ats: greenhouse, token: stripe}
+- {name: Databricks, ats: greenhouse, token: databricks}
+- {name: Coinbase, ats: greenhouse, token: coinbase}
+- {name: Figma, ats: greenhouse, token: figma}
+- {name: Airbnb, ats: greenhouse, token: airbnb}
+- {name: Robinhood, ats: greenhouse, token: robinhood}
+- {name: Instacart, ats: greenhouse, token: instacart}
+- {name: Samsara, ats: greenhouse, token: samsara}
+- {name: Gusto, ats: greenhouse, token: gusto}
+- {name: Anthropic, ats: greenhouse, token: anthropic}
+- {name: Palantir, ats: lever, token: palantir}
+- {name: Ramp, ats: ashby, token: ramp}
+- {name: OpenAI, ats: ashby, token: openai}
+- {name: Notion, ats: ashby, token: notion}
+- {name: Linear, ats: ashby, token: linear}
+- {name: Replit, ats: ashby, token: replit}
+- {name: Affirm, ats: greenhouse, token: affirm}
+- {name: Discord, ats: greenhouse, token: discord}
+- {name: Cloudflare, ats: greenhouse, token: cloudflare}
+- {name: MongoDB, ats: greenhouse, token: mongodb}
+- {name: Reddit, ats: greenhouse, token: reddit}
+- {name: Dropbox, ats: greenhouse, token: dropbox}
+- {name: Duolingo, ats: greenhouse, token: duolingo}
+- {name: Grafana Labs, ats: greenhouse, token: grafanalabs}
+- {name: Okta, ats: greenhouse, token: okta}
+- {name: Pinterest, ats: greenhouse, token: pinterest}
+- {name: Datadog, ats: greenhouse, token: datadog}
+- {name: Fastly, ats: greenhouse, token: fastly}
+- {name: Elastic, ats: greenhouse, token: elastic}
+- {name: Chime, ats: greenhouse, token: chime}
+- {name: SoFi, ats: greenhouse, token: sofi}
+- {name: Vercel, ats: greenhouse, token: vercel}
+- {name: Flexport, ats: greenhouse, token: flexport}
+- {name: Scale AI, ats: greenhouse, token: scaleai}
+- {name: Cockroach Labs, ats: greenhouse, token: cockroachlabs}
+- {name: PagerDuty, ats: greenhouse, token: pagerduty}
+- {name: Postman, ats: greenhouse, token: postman}
+- {name: Mixpanel, ats: greenhouse, token: mixpanel}
+- {name: LaunchDarkly, ats: greenhouse, token: launchdarkly}
+- {name: Intercom, ats: greenhouse, token: intercom}
+- {name: Amplitude, ats: greenhouse, token: amplitude}
+- {name: Roblox, ats: greenhouse, token: roblox}
+- {name: Twitch, ats: greenhouse, token: twitch}
+- {name: SpaceX, ats: greenhouse, token: spacex}
+- {name: Brex, ats: greenhouse, token: brex}
+- {name: Checkr, ats: greenhouse, token: checkr}
+- {name: Carta, ats: greenhouse, token: carta}
+- {name: Perplexity, ats: ashby, token: perplexity}
+- {name: Vanta, ats: ashby, token: vanta}
+- {name: Asana, ats: greenhouse, token: asana}
+- {name: Airtable, ats: greenhouse, token: airtable}
+- {name: Calendly, ats: greenhouse, token: calendly}
+- {name: ClickHouse, ats: greenhouse, token: clickhouse}
+- {name: Contentful, ats: greenhouse, token: contentful}
+- {name: Coursera, ats: greenhouse, token: coursera}
+- {name: Culture Amp, ats: greenhouse, token: cultureamp}
+- {name: Faire, ats: greenhouse, token: faire}
+- {name: Honeycomb, ats: greenhouse, token: honeycomb}
+- {name: Huntress, ats: greenhouse, token: huntress}
+- {name: Justworks, ats: greenhouse, token: justworks}
+- {name: Khan Academy, ats: greenhouse, token: khanacademy}
+- {name: Lattice, ats: greenhouse, token: lattice}
+- {name: Lucid, ats: greenhouse, token: lucidsoftware}
+- {name: Lyft, ats: greenhouse, token: lyft}
+- {name: Mercari, ats: greenhouse, token: mercari}
+- {name: New Relic, ats: greenhouse, token: newrelic}
+- {name: Nuro, ats: greenhouse, token: nuro}
+- {name: Peloton, ats: greenhouse, token: peloton}
+- {name: PlanetScale, ats: greenhouse, token: planetscale}
+- {name: Recursion, ats: greenhouse, token: recursionpharmaceuticals}
+- {name: Ripple, ats: greenhouse, token: ripple}
+- {name: SingleStore, ats: greenhouse, token: singlestore}
+- {name: Squarespace, ats: greenhouse, token: squarespace}
+- {name: StockX, ats: greenhouse, token: stockx}
+- {name: Zscaler, ats: greenhouse, token: zscaler}
+- {name: Block, ats: greenhouse, token: block}
+- {name: Anduril Industries, ats: greenhouse, token: andurilindustries}
+- {name: Waymo, ats: greenhouse, token: waymo}
+- {name: Riot Games, ats: greenhouse, token: riotgames}
+- {name: Abnormal Security, ats: greenhouse, token: abnormalsecurity}
+- {name: Scopely, ats: greenhouse, token: scopely}
+- {name: Twilio, ats: greenhouse, token: twilio}
+- {name: Tanium, ats: greenhouse, token: tanium}
+- {name: Algolia, ats: greenhouse, token: algolia}
+- {name: Upstart, ats: greenhouse, token: upstart}
+- {name: Sumo Logic, ats: greenhouse, token: sumologic}
+- {name: Rubrik, ats: greenhouse, token: rubrik}
+- {name: Attentive Mobile, ats: greenhouse, token: attentive}
+- {name: Cursor, ats: ashby, token: cursor}
+- {name: Cognition, ats: ashby, token: cognition}
+- {name: Sierra, ats: ashby, token: sierra}
+- {name: Speak, ats: ashby, token: speak}
+- {name: Watershed, ats: ashby, token: watershed}
+- {name: Braintrust, ats: ashby, token: braintrust}
+- {name: The Trade Desk, ats: greenhouse, token: thetradedesk}
+- {name: Pure Storage, ats: greenhouse, token: purestorage}
+- {name: ChargePoint, ats: greenhouse, token: chargepoint}
+- {name: Current, ats: greenhouse, token: current}
+- {name: Melio, ats: greenhouse, token: melio}
+- {name: Fireblocks, ats: greenhouse, token: fireblocks}
+- {name: Alloy, ats: greenhouse, token: alloy}
+- {name: Highnote, ats: greenhouse, token: highnote}
+- {name: Maven Clinic, ats: greenhouse, token: mavenclinic}
+- {name: Flatiron Health, ats: greenhouse, token: flatironhealth}
+- {name: Warp, ats: greenhouse, token: warp}
+- {name: Cribl, ats: greenhouse, token: cribl}
+- {name: Orca Security, ats: greenhouse, token: orcasecurity}
+- {name: Wiz, ats: greenhouse, token: wizinc}
+- {name: Corelight, ats: greenhouse, token: corelight}
+- {name: Chainguard, ats: greenhouse, token: chainguard}
+- {name: Cortex, ats: greenhouse, token: cortex}
+- {name: CircleCI, ats: greenhouse, token: circleci}
+- {name: Buildkite, ats: greenhouse, token: buildkite}
+- {name: Labelbox, ats: greenhouse, token: labelbox}
+- {name: Dataiku, ats: greenhouse, token: dataiku}
+- {name: Snorkel AI, ats: greenhouse, token: snorkelai}
+- {name: Imbue, ats: greenhouse, token: imbue}
+- {name: Flexe, ats: greenhouse, token: flexe}
+- {name: Route, ats: greenhouse, token: route}
+- {name: Bringg, ats: greenhouse, token: bringg}
+- {name: Klaviyo, ats: greenhouse, token: klaviyo}
+- {name: Iterable, ats: greenhouse, token: iterable}
+- {name: Braze, ats: greenhouse, token: braze}
+- {name: Customer.io, ats: greenhouse, token: customerio}
+- {name: Pendo, ats: greenhouse, token: pendo}
+- {name: Remote.com, ats: greenhouse, token: remotecom}
+- {name: FanDuel, ats: greenhouse, token: fanduel}
+- {name: Roku, ats: greenhouse, token: roku}
+- {name: Cloverly, ats: greenhouse, token: cloverly}
+- {name: Rho, ats: ashby, token: rho}
+- {name: Resend, ats: ashby, token: resend}
+- {name: Neon, ats: ashby, token: neon}
+- {name: Supabase, ats: ashby, token: supabase}
+- {name: Attio, ats: ashby, token: attio}
+- {name: Endex, ats: ashby, token: endex}
+- {name: Decagon, ats: ashby, token: decagon}
+- {name: Harvey AI, ats: ashby, token: harvey}
+- {name: Workato, ats: greenhouse, token: workato}
+- {name: Celonis, ats: greenhouse, token: celonis}
+- {name: Smartsheet, ats: greenhouse, token: smartsheet}
+- {name: Webflow, ats: greenhouse, token: webflow}
+- {name: Typeform, ats: greenhouse, token: typeform}
+- {name: JFrog, ats: greenhouse, token: jfrog}
+- {name: Veracode, ats: greenhouse, token: veracode}
+- {name: Netskope, ats: greenhouse, token: netskope}
+- {name: Expel, ats: greenhouse, token: expel}
+- {name: Mindbody, ats: greenhouse, token: mindbody}
+- {name: PandaDoc, ats: greenhouse, token: pandadoc}
+- {name: Rocket Lawyer, ats: greenhouse, token: rocketlawyer}
+- {name: Consensys, ats: greenhouse, token: consensys}
+- {name: Locus Robotics, ats: greenhouse, token: locusrobotics}
+- {name: Rocket Lab, ats: greenhouse, token: rocketlab}
+- {name: Astranis, ats: greenhouse, token: astranis}
+- {name: Varda Space, ats: greenhouse, token: vardaspace}
+- {name: Xometry, ats: greenhouse, token: xometry}
+- {name: Formlabs, ats: greenhouse, token: formlabs}
+- {name: Udacity, ats: greenhouse, token: udacity}
+- {name: Outschool, ats: greenhouse, token: outschool}
+- {name: Springboard, ats: greenhouse, token: springboard}
+- {name: Aircall, ats: lever, token: aircall}
+- {name: Cohere, ats: ashby, token: cohere}
+- {name: Physical Intelligence, ats: ashby, token: physicalintelligence}
+- {name: 1X Technologies, ats: ashby, token: 1x}
+- {name: Abridge, ats: ashby, token: abridge}
+- {name: Ambience Healthcare, ats: ashby, token: ambiencehealthcare}
+- {name: Commure, ats: ashby, token: commure}
+- {name: Anterior, ats: ashby, token: anterior}
+- {name: Metriport, ats: ashby, token: metriport}
+- {name: Kalshi, ats: ashby, token: kalshi}
+- {name: Polymarket, ats: ashby, token: polymarket}
+- {name: EliseAI, ats: ashby, token: eliseai}
+- {name: Restream, ats: ashby, token: restream}
+- {name: ElevenLabs, ats: ashby, token: elevenlabs}
+- {name: Synthesia, ats: ashby, token: synthesia}
+- {name: Suno, ats: ashby, token: suno}
+- {name: Ideogram, ats: ashby, token: ideogram}
+- {name: Poolside, ats: ashby, token: poolside}
+- {name: Vapi, ats: ashby, token: vapi}
+- {name: Anrok, ats: ashby, token: anrok}
+- {name: Numeral, ats: ashby, token: numeral}
+- {name: Drata, ats: ashby, token: drata}
+- {name: Secureframe, ats: ashby, token: secureframe}
+- {name: Sardine, ats: ashby, token: sardine}
+- {name: Merge, ats: ashby, token: merge}
+- {name: Nango, ats: ashby, token: nango}
+- {name: Paragon, ats: ashby, token: paragon}
+- {name: Composio, ats: ashby, token: composio}
+- {name: Payoneer, ats: greenhouse, token: payoneer}
+- {name: Modern Health, ats: greenhouse, token: modernhealth}
+- {name: Oura, ats: greenhouse, token: oura}
+- {name: Talkspace, ats: greenhouse, token: talkspace}
+- {name: Gympass, ats: greenhouse, token: gympass}
+- {name: ClassPass, ats: greenhouse, token: classpass}
+- {name: MyFitnessPal, ats: greenhouse, token: myfitnesspal}
+- {name: TaskRabbit, ats: greenhouse, token: taskrabbit}
+- {name: Nextdoor, ats: greenhouse, token: nextdoor}
+- {name: Medium, ats: greenhouse, token: medium}
+- {name: SeatGeek, ats: greenhouse, token: seatgeek}
+- {name: Yotpo, ats: greenhouse, token: yotpo}
+- {name: Bloomreach, ats: greenhouse, token: bloomreach}
+- {name: Sisense, ats: greenhouse, token: sisense}
+- {name: Hex Technologies, ats: greenhouse, token: hextechnologies}
+- {name: Fivetran, ats: greenhouse, token: fivetran}
+- {name: Hightouch, ats: greenhouse, token: hightouch}
+- {name: TigerGraph, ats: greenhouse, token: tigergraph}
+- {name: Neo4j, ats: greenhouse, token: neo4j}
+- {name: Sigma Computing, ats: greenhouse, token: sigmacomputing}
+- {name: Descope, ats: greenhouse, token: descope}
+- {name: Prismatic, ats: greenhouse, token: prismatic}
+- {name: DevRev, ats: greenhouse, token: devrev}
+- {name: Assembly AI, ats: greenhouse, token: assemblyai}
+- {name: Speechmatics, ats: greenhouse, token: speechmatics}
+- {name: Otter.ai, ats: greenhouse, token: otterai}
+- {name: Range, ats: greenhouse, token: range}
+- {name: Globalization Partners, ats: greenhouse, token: globalizationpartners}
+- {name: HackerRank, ats: greenhouse, token: hackerrank}
+- {name: Karat, ats: greenhouse, token: karat}
+- {name: Dialpad, ats: greenhouse, token: dialpad}
+- {name: Amazon, ats: amazon, token: unused}
+- {name: GOAT Group, ats: greenhouse, token: goatgroup}
+- {name: Ginkgo Bioworks, ats: greenhouse, token: ginkgobioworks}
+- {name: Hugging Face SR, ats: workable, token: huggingface}

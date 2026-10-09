@@ -1,0 +1,31 @@
+name: scan
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hourly-scan
+  cancel-in-progress: false
+
+on:
+  schedule:
+    # Offset from minute zero because GitHub's scheduler is busiest there.
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+jobs:
+  scan:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m unittest discover -s tests -v
+      - run: python main.py
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          SHEET_ID: ${{ secrets.SHEET_ID }}
