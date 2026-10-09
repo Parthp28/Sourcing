@@ -37,12 +37,10 @@ def open_sheet():
         try:
             ws = client.open_by_key(os.environ["SHEET_ID"]).sheet1
             current_header = ws.row_values(1)
-            print(f"ACTUAL SHEET HEADER: {current_header!r}")
-            print(f"EXPECTED HEADER:     {HEADER!r}")
 
             if not current_header:
                 ws.append_row(HEADER)
-            elif current_header != HEADER:
+            elif [cell.strip() for cell in current_header] != HEADER:
                 if current_header == HEADER[: len(current_header)]:
                     ws.update(values=[HEADER], range_name="A1:N1")
                 else:
