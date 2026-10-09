@@ -9,9 +9,20 @@ import time
 import gspread
 
 HEADER = [
-    "Company", "Role", "Location", "Work Type", "Posted", "Discovered",
-    "Apply Link", "Job Key", "Status", "Applied Date", "Notes", "Resume",
-    "Classification", "Classification Reason",
+    "Company",
+    "Role",
+    "Location",
+    "Work Type",
+    "Posted",
+    "Discovered",
+    "Apply Link",
+    "Job Key",
+    "Status",
+    "Applied Date",
+    "Notes",
+    "Resume",
+    "Classification",
+    "Classification Reason",
 ]
 KEY_COL = HEADER.index("Job Key") + 1
 
@@ -26,10 +37,13 @@ def open_sheet():
         try:
             ws = client.open_by_key(os.environ["SHEET_ID"]).sheet1
             current_header = ws.row_values(1)
+            print(f"ACTUAL SHEET HEADER: {current_header!r}")
+            print(f"EXPECTED HEADER:     {HEADER!r}")
+
             if not current_header:
                 ws.append_row(HEADER)
             elif current_header != HEADER:
-                if current_header == HEADER[:len(current_header)]:
+                if current_header == HEADER[: len(current_header)]:
                     ws.update(values=[HEADER], range_name="A1:N1")
                 else:
                     raise ValueError(
@@ -39,8 +53,10 @@ def open_sheet():
             return ws
         except gspread.exceptions.APIError as e:
             last_error = e
-            wait = 2 ** attempt
-            print(f"Sheets API error (attempt {attempt + 1}/4), retrying in {wait}s: {e}")
+            wait = 2**attempt
+            print(
+                f"Sheets API error (attempt {attempt + 1}/4), retrying in {wait}s: {e}"
+            )
             time.sleep(wait)
     raise last_error
 
