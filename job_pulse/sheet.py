@@ -30,25 +30,22 @@ KEY_COL = HEADER.index("Job Key") + 1
 def open_sheet():
     creds = json.loads(os.environ["GOOGLE_SERVICE_ACCOUNT_JSON"])
     client = gspread.service_account_from_dict(creds)
-    # Why: Google Sheets occasionally returns transient 503s under load —
-    # retrying with backoff avoids failing an entire scan over a blip.
+
     last_error = None
     for attempt in range(4):
         try:
             ws = client.open_by_key(os.environ["SHEET_ID"]).sheet1
+
+            # Always enforce the expected header.
+            # This only updates row 1 and does not touch job/application data.
             current_header = ws.row_values(1)
 
-            if not current_header:
-                ws.append_row(HEADER)
-            elif [cell.strip() for cell in current_header] != HEADER:
-                if current_header == HEADER[: len(current_header)]:
-                    ws.update(values=[HEADER], range_name="A1:N1")
-                else:
-                    raise ValueError(
-                        "Sheet header does not match the expected Job Pulse schema. "
-                        "Use a new sheet or migrate the header before scanning."
-                    )
+            if current_header != HEADER:
+                print("Sheet header differs from expected schema. Fixing row 1...")
+                ws.update(values=[HEADER], range_name="A1:N1")
+
             return ws
+
         except gspread.exceptions.APIError as e:
             last_error = e
             wait = 2**attempt
@@ -56,6 +53,7 @@ def open_sheet():
                 f"Sheets API error (attempt {attempt + 1}/4), retrying in {wait}s: {e}"
             )
             time.sleep(wait)
+
     raise last_error
 
 
